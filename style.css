@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  font-family: 'Poppins';
+  font-size: 16px;
+  color: #0f4b57;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.6);
+  background-color: #fff;
+}
+
+header img {
+  height: 40px;
+  margin-left: 1rem;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #0f4b57;
+  height: 100%;
+  margin-right: 3rem;
+  font-size: 1.5rem;
+}
+
+nav a .hover {
+  position: relative;
+}
+
+nav a .hover:before, nav a .hover:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  background-color: rgba(15, 75, 87, 0.6);
+}
+
+nav a:hover {
+  cursor: pointer;
+}
+
+nav a:hover .hover:before, nav a:hover .hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  height: 100vh;
+}
+
+.titleHeaders {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  width: 40%;
+  height: 140%;
+}
+
+.titleHeaders h1,
+.titleHeaders h2 {
+  width: 70%;
+  font-size: 4rem;
+  font-family: 'Poppins';
+  text-align: center;
+  color: #0f4b57;
+  margin: 0.5rem;
+  opacity: 0;
+}
+
+.titleHeaders.loaded h1,
+.titleHeaders.loaded h2 {
+  opacity: 1;
+  transition: opacity 3s ease 2s;
+}
+
+
+
+.titleImages.loaded .justYlva {
+  right: 25%;
+  transition: right 2.5s 0.5s cubic-bezier(0.28, 0.06, 0.23, 1.11);
+}
+
+.titleImages.loaded .ylvaBg {
+  bottom: 50%;
+  transform: translateY(50%);
+  right: 0;
+  transition: bottom 2.5s cubic-bezier(0.28, 0.06, 0.23, 1.11), right 2.5s cubic-bezier(0.28, 0.06, 0.23, 1.11);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  color: black;
+  font-family: lato;
+}
+
+.projects h2 {
+  text-align: center;
+  margin: 1rem 0 6rem;
+  font-size: 4rem;
+}
+
+.projects a {
+  color: #fff;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  margin: 0;
+  overflow: hidden;
+  background-color: #0f4b57;
+  color: #fff;
+  position: relative;
+}
+
+.project .projectInfo,
+.project img,
+.project .imgLink {
+  width: 50%;
+}
+
+.project h3 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.project img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 0;
+}
+
+.project .imgLink {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.project.centeredImg img {
+  object-position: center;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectInfo i {
+  margin: 0.5rem;
+}
+
+.projectInfo h3 .hover {
+  position: relative;
+}
+
+.projectInfo h3 .hover:before, .projectInfo h3 .hover:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  transition: all 0.6s ease-in-out;
+  opacity: 0;
+  background-color: #fff;
+}
+
+.projectInfo h3:hover {
+  cursor: pointer;
+}
+
+.projectInfo h3:hover .hover:before, .projectInfo h3:hover .hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.projectReversed {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectReversed .imgLink {
+  left: 50%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.contact-links h2 {
+  font-size: 2.7rem;
+}
+
+.contact-links a {
+  color: #0f4b57;
+  font-size: 1.6rem;
+  margin-right: 3rem;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  border: 1px solid #0f4b57;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-links a span {
+  margin-left: 0.5rem;
+}
+
+.contact-links a:hover {
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease;
+}
+
+@media only screen and (max-width: 1600px) {
+  header img {
+    width: 4rem;
+  }
+  nav a {
+    font-size: 1.3rem;
+  }
+  .titleHeaders {
+    width: 45%;
+  }
+  .titleHeaders h1,
+  .titleHeaders h2 {
+    font-size: 3.5rem;
+  }
+  .projects h2 {
+    font-size: 3.5rem;
+  }
+  .projects .project {
+    height: 70vh;
+  }
+  .projectInfo h3 {
+    font-size: 3rem;
+  }
+  .contact h2 {
+    font-size: 2.7rem;
+  }
+  .contact .contact-links {
+    width: 100%;
+  }
+  .contact a {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .nav a {
+    font-size: 1.4rem;
+  }
+  .title {
+    margin: 0;
+    justify-content: space-evenly;
+    height: 20vh;
+  }
+  .title .ylvaBg {
+    width: 90%;
+  }
+  .title .justYlva {
+    width: 35%;
+  }
+  .titleHeaders {
+    padding-left: 0;
+    width: initial;
+  }
+  .titleHeaders h1,
+  .titleHeaders h2 {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .projects h2 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+  .projects .project {
+    height: 60vh;
+  }
+  .projectInfo h3 {
+    font-size: 2.5rem;
+  }
+  .contact h2 {
+    font-size: 2.6rem;
+  }
+  .contact a {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .titleHeaders {
+    padding-left: 2rem;
+  }
+  .titleImages {
+    width: 60%;
+  }
+  .projects h2 {
+    margin: 1rem 0 4rem;
+  }
+  .contact .contact-links {
+    width: 90%;
+  }
+  .contact a {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    padding: 1rem;
+  }
+  header img {
+    margin-left: 2rem;
+    width: 3.5rem;
+  }
+  nav a {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+  }
+  .title {
+    justify-content: space-between;
+    height: 80vh;
+  }
+  .title h1,
+  .title h2 {
+    font-size: 2rem;
+  }
+  .title .titleHeaders {
+    padding-left: 2rem;
+    width: 45%;
+  }
+  .title .titleImages {
+    width: 80%;
+  }
+  .projects h2 {
+    font-size: 2rem;
+    margin: 0 0 3rem;
+  }
+  .projects .project {
+    height: 40vh;
+  }
+  .projectInfo h3 {
+    font-size: 1.7rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .contact-links {
+    flex-direction: column;
+  }
+  .contact-links a {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  header {
+    padding: 1rem;
+  }
+  header img {
+    margin-left: 0.5rem;
+    width: 3rem;
+  }
+  nav a {
+    font-size: 1rem;
+    margin-right: 1.5rem;
+  }
+  .title {
+    height: 90vh;
+    position: relative;
+  }
+  .title .titleHeaders {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+  }
+  .title h1,
+  .title h2 {
+    font-size: 1.9rem;
+    margin: 0.2rem 0;
+    width: 80%;
+  }
+  .title .titleImages {
+    width: 100%;
+  }
+  .title .ylvaBg {
+    width: 100%;
+  }
+  .title .justYlva {
+    width: 40%;
+    z-index: -1;
+  }
+  .title .loaded .justYlva {
+    right: 6%;
+  }
+  .projects h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .projects .project {
+    height: 55vh;
+  }
+  .project {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .project img,
+  .project .imgLink {
+    width: 100%;
+    height: 75%;
+  }
+  .project .imgLink {
+    top: auto;
+    bottom: 0;
+  }
+  .project .projectInfo {
+    width: 100%;
+    flex: 1;
+  }
+  .projectInfo h3 {
+    font-size: 1.2rem;
+    margin: 0 0.8rem;
+  }
+  .project:last-child {
+    border-bottom: 1px solid rgba(15, 75, 87, 0.6);
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  .contact a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  header {
+    padding: 1rem;
+  }
+  header img {
+    margin-left: 0;
+    width: 3rem;
+  }
+  nav a {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  .title .titleImages {
+    width: 100%;
+  }
+  .title .loaded .justYlva {
+    right: 2%;
+  }
+  .contact a {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  nav a {
+    margin-right: 0.7rem;
+  }
+  .title .titleHeaders {
+    padding: 1rem;
+  }
+  .title h1,
+  .title h2 {
+    font-size: 1.6rem;
+  }
+}
