@@ -132,9 +132,9 @@ nav a:hover .hover:before, nav a:hover .hover:after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  padding-top: 100px;
   color: black;
-  font-family: lato;
+  font-family: nunito;
 }
 
 .projects h2 {
@@ -149,6 +149,7 @@ nav a:hover .hover:before, nav a:hover .hover:after {
 
 .project {
   display: flex;
+  padding-top: 2px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
