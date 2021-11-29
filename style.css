@@ -132,8 +132,10 @@ nav a:hover .hover:before, nav a:hover .hover:after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
-  color: black;
+  padding-top: 20px;
+  color: rgb(57, 79, 141);
+  margin-top: 70px;
+  margin-bottom: -10;
   font-family: nunito;
 }
 
